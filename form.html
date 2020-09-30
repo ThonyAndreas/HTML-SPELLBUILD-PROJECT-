@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Asul&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="Assets/Favicon.ico">
+    <title>Form - Buy</title>
+</head>
+
+<body class="body_buy">
+
+    <header>
+        <div class="inner">
+            <div class="logo">
+                <img src="Assets/iconos.png" alt="none">
+                <h1>SPELLBUILD</h1>
+            </div>
+
+            <ul class="navigation">
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+                <a href="media.html">
+                    <li>Media</li>
+                </a>
+                <a href="aboutus.html">
+                    <li>About Us</li>
+                </a>
+                <a href="community.html">
+                    <li>Community</li>
+                </a>
+                <a href="buy.html">
+                    <li>Buy</li>
+                </a>
+            </ul>
+
+
+        </div>
+    </header>
+
+    <script type="text/javascript">
+        function doinsert() {
+            var fullname = document.getElementById("fullname").value;
+            var email = document.getElementById("email").value;
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var confirmpassword = document.getElementById("confirmpassword").value;
+            var gender = document.getElementById("gender").value;
+            var quantity = document.getElementById("quantity").value;
+            var address = document.getElementById("address").value;
+            if (fullname == "" && email == "" && username == "" && password == "" && confirmpassword == "" && quantity == "" && address == "") {
+                alert('Your data is still empty, fill the data first');
+            } else if (fullname == "") {
+
+                alert('fullname Harus diisi');
+            } else if (email == "") {
+                alert("Email harus di isi !");
+
+            } else if (username == "") {
+                alert("isi Data username !");
+
+            } else if (password == "") {
+                alert("Silahkan isi data password");
+
+            } else if (confirmpassword == "") {
+                alert("Silahkan isi data confirmpassword");
+
+            } else if (gender == "") {
+                alert("Silahkan pilih data gender");
+
+            } else if (quantity == "") {
+                alert("Silahkan isi data quantity");
+
+            } else if (address == "") {
+                alert("Silahkan isi data address");
+
+            } else {
+                alert('Berhasil !!');
+            }
+        }
+    </script>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" class="form-control" id="fullname" placeholder="enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" placeholder="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="enter password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmpassword">confirmartionPassword</label>
+                        <input type="password" class="form-control" id="confirmpassword" placeholder="re-enter password">
+                    </div>
+                    <br>
+                    <div>
+                        <label>Select Gender : </label> <br/>
+                        <hr style="color: black;">
+                        <input type="radio" name="gender" id="gender" value="male" /> Male &nbsp;
+                        <input type="radio" name="gender" id="gender" value="female" /> female <br>
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" class="form-control" id="quantity" placeholder="quantity">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <textarea class="form-control" id="address" rows="3" placeholder="address"></textarea>
+                    </div>
+
+
+
+
+                    <br>
+                    <button class="btn-success" onclick="doinsert()">Simpan</button>
+                </form>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
